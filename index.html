@@ -11,6 +11,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link href="css/format.css" rel="stylesheet">
+    <script>!function () { "use strict"; function r() { function e() { var r = { width: u.width / u.naturalWidth, height: u.height / u.naturalHeight }, a = { width: parseInt(window.getComputedStyle(u, null).getPropertyValue("padding-left"), 10), height: parseInt(window.getComputedStyle(u, null).getPropertyValue("padding-top"), 10) }; i.forEach(function (e, t) { var n = 0; o[t].coords = e.split(",").map(function (e) { var t = 1 == (n = 1 - n) ? "width" : "height"; return a[t] + Math.floor(Number(e) * r[t]) }).join(",") }) } function t(e) { return e.coords.replace(/ *, */g, ",").replace(/ +/g, ",") } function n() { clearTimeout(d), d = setTimeout(e, 250) } function r(e) { return document.querySelector('img[usemap="' + e + '"]') } var a = this, o = null, i = null, u = null, d = null; "function" != typeof a._resize ? (o = a.getElementsByTagName("area"), i = Array.prototype.map.call(o, t), u = r("#" + a.name) || r(a.name), a._resize = e, u.addEventListener("load", e, !1), window.addEventListener("focus", e, !1), window.addEventListener("resize", n, !1), window.addEventListener("readystatechange", e, !1), document.addEventListener("fullscreenchange", e, !1), u.width === u.naturalWidth && u.height === u.naturalHeight || e()) : a._resize() } function e() { function t(e) { e && (!function (e) { if (!e.tagName) throw new TypeError("Object is not a valid DOM element"); if ("MAP" !== e.tagName.toUpperCase()) throw new TypeError("Expected <MAP> tag, found <" + e.tagName + ">.") }(e), r.call(e), n.push(e)) } var n; return function (e) { switch (n = [], typeof e) { case "undefined": case "string": Array.prototype.forEach.call(document.querySelectorAll(e || "map"), t); break; case "object": t(e); break; default: throw new TypeError("Unexpected data type (" + typeof e + ").") }return n } } "function" == typeof define && define.amd ? define([], e) : "object" == typeof module && "object" == typeof module.exports ? module.exports = e() : window.imageMapResize = e(), "jQuery" in window && (window.jQuery.fn.imageMapResize = function () { return this.filter("map").each(r).end() }) }();</script>
+    <!-- credits to davidjbradshaw on GitHub for this JavaScript!-->
 </head>
 
 <body>
@@ -53,8 +55,17 @@
         </nav>
     </header>
     <div class="content">
-        <img src="img/deathgrips_together.webp" class="mt-4 tetete">
+        <h1 class="my-2 text">Death Grips</h1>
+        <small class="phonetics p-1">dɛθ ɡrɪps</small>
+        <img src="img/deathgrips_together.webp" usemap="#image-map" class="my-1>
+
+        <map name=" image-map">
+        <area target="" alt="" title="" href="" coords="233,307,3,26" shape="rect">
+        <area target="" alt="" title="" href="" coords="420,89,564,318" shape="rect">
+        <area target="" alt="" title="" href="" coords="795,58,949,259" shape="rect">
+        </map>
         <h1 class="my-1 text">Biography</h1>
+        <small class="phonetics p-1 my-1">baɪˈɑɡrəfi</small>
         <p class="text" id="biotext">Death Grips is an American experimental hip-hop band formed in 2010 in Sacramento,
             California.
             The group consists of producers Zach Hill (drums), Andy Morin (engineering), and vocalist Stefan
@@ -66,6 +77,7 @@
         <a href="https://en.wikipedia.org/wiki/Death_Grips">Source</a>
         <br>
         <h1 class="text"> Discography</h1>
+        <small class="phonetics p-1 my-1">dɪˈskɔɡrəfi</small>
         <p class="text">American band Death Grips has released seven studio albums, two compilation albums, four
             extended plays (EPs), one mixtape, six non-album singles, 16 album singles, three remixes, one guest
             appearance and 47 music videos. The band was formed by MC Ride, Zach Hill, and Andy Morin in Sacramento,
@@ -74,27 +86,23 @@
     </div>
     <div class="container text-center tungtung">
         <div class="row">
-            <div class="col-sm-12"><img src="img/covers/the-money-store.jpg"></div>
+            <div class="col-sm-12"><a href="https://soundcloud.com/deathgrips/sets/the-money-store-1"><img
+                        src="img/covers/the-money-store.jpg"></a></div>
         </div>
         <div class="row">
-            <div class="col-sm"><img src="img/covers/no-love-deep-web.webp"></div>
-            <div class="col-sm"><img src="img/covers/government-plates.jpg"></div>
-            <div class="col-sm"><img src="img/covers/the-powers-that-b.jpg"></div>
+            <div class="col-sm"><a href="https://soundcloud.com/deathgrips/sets/no-love-deep-web"><img
+                        src="img/covers/no-love-deep-web.webp"></a></div>
+            <div class="col-sm"><a href="https://soundcloud.com/deathgrips/sets/government-plates"><img
+                        src="img/covers/government-plates.jpg"></a></div>
+            <div class="col-sm"><a href="https://soundcloud.com/deathgrips/sets/the-powers-that-b-1"><img
+                        src="img/covers/the-powers-that-b.jpg"></a></div>
         </div>
         <div class="row">
             <div class="col-sm"><img src="img/covers/bottomless-pit.jpg"></div>
             <div class="col-sm"><img src="img/covers/year-of-the-snitch.webp"></div>
         </div>
-
     </div>
-    </div>
-    <footer>
-        <a href="https://soundcloud.com/deathgrips">Soundcloud</a>
-        <a href="https://www.youtube.com/channel/UCuq1H-HXWoW4JL-hX5bWxzw">Youtube</a>
-        <a href="https://open.spotify.com/intl-de/artist/5RADpgYLOuS2ZxDq7ggYYH">Spotify</a>
-        <a href="https://music.apple.com/ch/artist/death-grips/437819641">Apple Music</a>
-    </footer>
-
+    <script>imageMapResize();</script>
 </body>
 
 </html>
