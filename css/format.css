@@ -11,6 +11,7 @@ img {
     display: flex;
     align-self: center;
     flex-direction: column;
+    padding: 1em;
 }
 
 footer {
@@ -71,19 +72,113 @@ button {
     flex-wrap: wrap;
     width: 60%;
     align-content: flex-start;
-    justify-content: flex-start !important;
+    justify-content: space-around !important;
 }
 
 .innerleft {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
 }
 
 .leftimage {
     display: flex;
     order: 10;
+    width: 50%;
+    height: auto;
+    margin: 2em;
+    align-self: center;
 }
 
 .lefttext {
     display: flex;
+    margin: 1em;
     order: 1;
+    align-self: center;
+}
+
+@media (max-width:800px) {
+    .leftcontainer {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .innerleft {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .leftimage {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        width: 80%
+    }
+
+    .lefttext {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+}
+
+.rightcontainer {
+    display: flex;
+    color: #f4f4f4;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 60%;
+    align-content: flex-start;
+    justify-content: space-around !important;
+}
+
+.innerright {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+}
+
+.rightimage {
+    display: flex;
+    order: 10;
+    width: 50%;
+    height: auto;
+    margin: 2em;
+    align-self: center;
+}
+
+.righttext {
+    display: flex;
+    margin: 1em;
+    order: 1;
+    align-self: center;
+}
+
+@media (max-width:800px) {
+    .rightcontainer {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .innerright {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .rightimage {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        width: 80%
+    }
+
+    .righttext {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
 }
