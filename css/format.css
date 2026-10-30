@@ -14,7 +14,7 @@ img {
     padding: 1em;
 }
 
-footer {
+.feet {
     display: flex;
     align-self: center;
     flex-direction: row;
@@ -186,4 +186,9 @@ button {
 a:link {
     color: black;
     background-color: transparent;
+}
+
+table .event {
+    background-color: black;
+    color: #f4f4f4
 }
